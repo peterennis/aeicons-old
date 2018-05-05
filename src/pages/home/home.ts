@@ -20,19 +20,3 @@ export class HomePage {
   }
 
 }
-
-
-//import { IonicPageModule } from 'ionic-angular';
-//import { SvgPage } from './svg';
-//import { KUTE } from '../../assets/js/kute-svg.min';
-
-//@NgModule({
-// declarations: [
-//    SvgPage,
-//    //KUTE
-//  ],
-//  imports: [
-//    IonicPageModule.forChild(SvgPage)
-//  ],
-//})
-//export class SvgPageModule {}
