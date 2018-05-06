@@ -33,12 +33,12 @@ export class HomePage {
     .staggerTo("#adaept *", 2, {scaleX:1.2, scaleY:.85, y:-18, rotationX: 15, rotationY: -15, rotationZ: 2, ease:Elastic.easeOut}, .015, 0.2)
     .staggerTo("#adaept *", 2, {scaleX:1, scaleY:1, y:0, rotationY:0, rotationX: 0, rotationZ: 0, ease:Elastic.easeOut}, .015, 0.4)
     
-    // a MOVING LEFT
+    // ae MOVING LEFT
     .to("#a", .6, {x:-200, rotationY:-20, ease:Expo.easeOut}, "b")
     .to("#e", .6, {x:-100, rotationY:-20, ease:Expo.easeOut}, "b")
       
-    // e MOVING RIGHT
-    .to("#e", .6, {x:200, rotationY:20, ease:Expo.easeOut}, "c+=.1")
+    // ae MOVING RIGHT
+    .to("#a", .6, {x:600, rotationY:20, ease:Expo.easeOut}, "c+=.1")
     .to("#e", .6, {x:100, rotationY:25, ease:Expo.easeOut}, "c+=.1")
       
     // ADAEPT BACK POSITION
