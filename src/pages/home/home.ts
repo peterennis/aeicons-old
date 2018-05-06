@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Elastic } from 'gsap';
 import { Expo } from 'gsap';
 import { TimelineLite } from 'gsap';
-import { TweenLite } from 'gsap';
+//import { TweenLite } from 'gsap';
 
 @Component({
   selector: 'page-home',
@@ -76,7 +76,7 @@ export class HomePage {
     .set(".svg-container", { perspective: 200 })
     .set("#adaept3", {transformOrigin:"center"})
 
-    .to(["#a3", "#e3"], 1, {scale:0.2, opacity:0.3})
+    .to(["#a3", "#e3"], 1, {scale:0.2, opacity:0.3, repeat:2, yoyo:true})
     .to(["#a3", "#e3"], 1, {scale:1, opacity:1})
 
     console.log('drawAdaept3 before return');
