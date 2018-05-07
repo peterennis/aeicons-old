@@ -84,6 +84,8 @@ export class HomePage {
   }
 
 	drawAdaept4() {
+    // Ref: http://svglab.com/exp/generate-svg-js.html
+    // Ref: https://stackblitz.com/edit/gsap-demo?file=app%2Fapp.component.css
 
     var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttributeNS(null,"id","svgDotTest");
