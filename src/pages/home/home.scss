@@ -28,4 +28,22 @@ page-home {
     transform: rotate(360deg) scale(2);
   }
 
+  p {
+    font-family: Lato;
+  }
+  
+  .dotContainer{
+    width: 80vw;
+    height: 40vh;
+    background-color: rgb(124, 233, 173);
+    display: block;
+  }
+  
+  .part{
+    width: 40%;
+    height: 50%;
+    background-color: rgb(175, 253, 168);
+    text-align: center;
+  }
+
 }

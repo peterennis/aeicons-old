@@ -76,13 +76,80 @@ export class HomePage {
     .set(".svg-container", { perspective: 200 })
     .set("#adaept3", {transformOrigin:"center"})
 
-    .to(["#a3", "#e3"], 1, {scale:0.2, opacity:0.3, repeat:2, yoyo:true})
+    .to(["#a3", "#e3"], 1, {scale:0.25, opacity:0.5, repeat:2, yoyo:true})
     .to(["#a3", "#e3"], 1, {scale:1, opacity:1})
 
     console.log('drawAdaept3 before return');
     return tlAdaept3;
   }
 
+	drawAdaept4() {
+
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttributeNS(null,"id","svgDotTest");
+    svg.setAttributeNS(null,"height","120");
+    svg.setAttributeNS(null,"width","100%");
+    
+    document.getElementsByTagName('body')[0].appendChild(svg);
+    var svgDotTest = document.getElementById('svgDotTest');
+    
+    var txtElem = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    txtElem.setAttributeNS(null,"x","20");
+    txtElem.setAttributeNS(null,"y","40");
+    
+    var theText = "Hello World! This is SVG Text created with JavaScript.";
+    var theMSG = document.createTextNode(theText);
+    txtElem.appendChild(theMSG);
+     
+    svgDotTest.appendChild(txtElem);
+
+// TODO: Create function to test if the element exists, only create when it does not exist
+
+    var style = document.getElementById("svgDotTest").style.display;
+    if(style === "none")
+      document.getElementById("svgDotTest").style.display = "block";
+    else
+      document.getElementById("svgDotTest").style.display = "none";
+    //or to hide all the svg
+    //document.getElementById("mySvg").style.display = "none";
+
+
+// TODO: Get particlesTimeline working using as for dot, Ref: https://greensock.com/jump-start-js#timelinelite-labels
+/*
+		var particlesTimeline = new TimelineLite(),
+			i = 300,
+			radius = 450,
+			centerX= 360,
+			centerY = 30;
+//			dots = [],
+//			rawDots = [];
+    
+    let dotContain = document.getElementById("dotContainer");
+
+		while (--i > -1) {
+			let dot = document.createElement("a4");
+			dot.inner src .src = "img/dot.png";
+			dot.id = "dot" + i;
+			dotContain.appendChild;
+      dot.style.cssText = "position:absolute; left:" + centerX + "px; top:" + centerY + "px; width:1px; height:1px;"
+
+			var angle = Math.random() * Math.PI * 2,
+				insertionTime = i * 0.015;
+				
+			particlesTimeline.from(dot, 0.05, {opacity:0, immediateRender:true}, insertionTime);
+			
+			particlesTimeline.to(dot, .7, {left:Math.cos(angle) * radius + centerX, 
+					top:Math.sin(angle) * radius + centerY, 
+					width:32, 
+					height:32,
+				ease:Expo.easeIn
+			}, insertionTime);
+			
+		}
+    return particlesTimeline;
+*/
+  }
+  
   onComplete() {
     this.tl.clear().add(this.drawAdaept());
     this.tl.clear().add(this.drawAdaept2());
