@@ -3,6 +3,7 @@ import { Elastic } from 'gsap';
 import { Expo } from 'gsap';
 import { TimelineLite } from 'gsap';
 //import { TweenLite } from 'gsap';
+//import $ from "jquery";
 
 @Component({
   selector: 'page-home',
@@ -15,9 +16,10 @@ export class HomePage {
 
   constructor( ) { }
 
-  drawAdaept() {
-    var tlAdaept = new TimelineLite({delay:.5});
-    tlAdaept
+  drawAdaept1() {
+
+    var tlAdaept1 = new TimelineLite({delay:.5});
+    tlAdaept1
       
     // SET
     .set(".svg-container", { perspective: 200 })
@@ -37,8 +39,9 @@ export class HomePage {
       
     // ADAEPT BACK POSITION
     .to("#adaept *", 1.5, {x:0, y:0, rotationY:0}, "+=1")
-  
-    return tlAdaept;
+
+    console.log('drawAdaept1 before return');
+    return tlAdaept1;
   }
 
   drawAdaept2() {
@@ -148,9 +151,9 @@ export class HomePage {
 			particlesTimeline.from(dot, 0.05, {opacity:0, immediateRender:true}, insertionTime);
 			
 			particlesTimeline.to(dot, .7, {left:Math.cos(angle) * radius + centerX, 
-					top:Math.sin(angle) * radius + centerY, 
-					width:32, 
-					height:32,
+				top:Math.sin(angle) * radius + centerY, 
+				width:32, 
+				height:32,
 				ease:Expo.easeIn
 			}, insertionTime);
 			
@@ -160,7 +163,7 @@ export class HomePage {
   }
   
   onComplete() {
-    this.tl.clear().add(this.drawAdaept());
+    this.tl.clear().add(this.drawAdaept1());
     this.tl.clear().add(this.drawAdaept2());
     this.tl.clear().add(this.drawAdaept3());
     this.master.play(0);
@@ -168,7 +171,6 @@ export class HomePage {
 
   ionViewWillEnter() {
     console.log("ionViewWillEnter - This function will be called every time you enter the view");
-    this.drawAdaept();
   }
 
   ionViewDidLoad() {
