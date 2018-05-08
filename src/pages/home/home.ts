@@ -86,32 +86,39 @@ export class HomePage {
 	drawAdaept4() {
     // Ref: http://svglab.com/exp/generate-svg-js.html
     // Ref: https://stackblitz.com/edit/gsap-demo?file=app%2Fapp.component.css
+    // Ref: https://stackoverflow.com/questions/5629684/how-to-check-if-element-exists-in-the-visible-dom/16820058#16820058
 
-    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttributeNS(null,"id","svgDotTest");
-    svg.setAttributeNS(null,"height","120");
-    svg.setAttributeNS(null,"width","100%");
-    
-    document.getElementsByTagName('body')[0].appendChild(svg);
-    var svgDotTest = document.getElementById('svgDotTest');
-    
-    var txtElem = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    txtElem.setAttributeNS(null,"x","20");
-    txtElem.setAttributeNS(null,"y","40");
-    
-    var theText = "Hello World! This is SVG Text created with JavaScript.";
-    var theMSG = document.createTextNode(theText);
-    txtElem.appendChild(theMSG);
-     
-    svgDotTest.appendChild(txtElem);
+    // TODO: Test if the element exists, only create when it does not exist
+    if(document.body.contains(document.getElementById("svgDotTest")))
+      console.log('element exists');
+    else {
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttributeNS(null,"id","svgDotTest");
+      svg.setAttributeNS(null,"height","120");
+      svg.setAttributeNS(null,"width","100%");
 
-// TODO: Create function to test if the element exists, only create when it does not exist
+      document.getElementsByTagName('body')[0].appendChild(svg);
+      var svgDotTest = document.getElementById('svgDotTest');
+      
+      var txtElem = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      txtElem.setAttributeNS(null,"x","20");
+      txtElem.setAttributeNS(null,"y","40");
+      
+      var theText = "adaept SVG Text created with JavaScript!";
+      var theMSG = document.createTextNode(theText);
+      txtElem.appendChild(theMSG);
+      
+      svgDotTest.appendChild(txtElem);
+    }
 
     var style = document.getElementById("svgDotTest").style.display;
-    if(style === "none")
+    if(style === "none") {
+      console.log('style === "none"');
       document.getElementById("svgDotTest").style.display = "block";
-    else
+    } else {
+      console.log('display = "none"');
       document.getElementById("svgDotTest").style.display = "none";
+    }
     //or to hide all the svg
     //document.getElementById("mySvg").style.display = "none";
 
