@@ -3,7 +3,7 @@ import { Elastic } from 'gsap';
 import { Expo } from 'gsap';
 import { TimelineLite } from 'gsap';
 //import { TweenLite } from 'gsap';
-//import $ from "jquery";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'page-home',
@@ -15,6 +15,10 @@ export class HomePage {
   tl = new TimelineLite;
 
   constructor( ) { }
+
+  clickAdaeptIcon() {
+    console.log('clickAdaeptIcon was clicked');
+  }
 
   drawAdaept1() {
 

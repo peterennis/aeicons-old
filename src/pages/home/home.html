@@ -1,7 +1,12 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>
-      adaepticons
+    <ion-buttons left>
+      <button ion-button icon-only (click)='clickAdaeptIcon();'>
+        <ion-icon class="px50" name="adaept-adaept-ae" color="aered"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title class="title">
+      adaepticons {{title}}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -83,7 +88,7 @@
         <ion-row align-items-center><div>4</div>
           <div text-left><button ion-fab mini color="danger" (click)='drawAdaept4();'><ion-icon name="play"></ion-icon></button></div>
           <!--  <svg style="display: none" width="100%" height="40" id="svgDotTest"><text y="40" x="20"></text></svg> -->
-          <svg width="100%" height="30" id="svgDotTest"><text y="20" x="160">adaept SVG text show/hide</text></svg>
+          <svg width="100%" height="30" id="svgDotTest"><text y="20" x="80">adaept SVG text show/hide</text></svg>
           <p class="part" #animeObject>partition</p>
         </ion-row>
       </ion-grid>
