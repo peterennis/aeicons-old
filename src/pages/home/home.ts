@@ -18,6 +18,9 @@ export class HomePage {
 
   clickAdaeptIcon() {
     console.log('clickAdaeptIcon was clicked');
+    this.drawAdaept1();
+    this.drawAdaept2();
+    this.drawAdaept3();
   }
 
   drawAdaept1() {
@@ -57,12 +60,12 @@ export class HomePage {
     .set("#adaept2", {transformOrigin:"center"})
 
     // ADAEPT MOTION
-    .staggerTo("#adaept2 *", 2, {scaleX:1.2, scaleY:.85, y:-18, rotationX: 15, rotationY: -15, rotationZ: 2, ease:Elastic.easeOut}, .015, 0.2)
+    .staggerTo("#adaept2 *", 2, {scaleX:1.75, scaleY:.75, y:-30, rotationX: 30, rotationY: -40, rotationZ: 3, ease:Elastic.easeOut}, .015, 0.3)
     .staggerTo("#adaept2 *", 2, {scaleX:1, scaleY:1, y:0, rotationY:0, rotationX: 0, rotationZ: 0, ease:Elastic.easeOut}, .015, 0.4)
     
     // ae MOVING LEFT
-    .to("#a2", .6, {x:-200, rotationY:-200, ease:Expo.easeOut}, "b")
-    .to("#e2", .6, {x:-100, rotationY:-200, ease:Expo.easeOut}, "b")
+    .to("#a2", 2.5, {x:-200, rotationY:-200, ease:Expo.easeOut}, "b")
+    .to("#e2", 2.5, {x:-100, rotationY:-200, ease:Expo.easeOut}, "b")
       
     // ae MOVING RIGHT
     .to("#a2", .6, {x:350, rotationY:90, ease:Expo.easeIn}, "c+=.2")
