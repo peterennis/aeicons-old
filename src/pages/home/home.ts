@@ -3,7 +3,7 @@ import { Elastic } from 'gsap';
 import { Expo } from 'gsap';
 import { TimelineLite } from 'gsap';
 //import { TweenLite } from 'gsap';
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
 
 @Component({
   selector: 'page-home',
