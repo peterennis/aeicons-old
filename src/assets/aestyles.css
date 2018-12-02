@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 40px 75px 40px;
+  grid-template-rows: 40px;
+  align-items: center;
+  justify-items: center;
+  }
+
+  ion-icon:hover {
+    cursor: pointer;
+}
