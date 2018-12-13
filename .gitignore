@@ -1,6 +1,6 @@
 dist/
 www/
-.firebase/
+.firebase/hosting.d3d3.cache
 
 *~
 *.sw[mnpcod]
